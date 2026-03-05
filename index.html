@@ -498,9 +498,8 @@ letter-spacing:1px;
                 <a href="#contacts">Контакты</a>
             </nav>
 
-       <meta name="description" content="TEKA MEBEL — мебель на заказ в Актобе. Кухни, шкафы, гардеробные. Бесплатный замер и установка.">
-      <meta name="keywords" content="TEKA MEBEL, мебель на заказ актобе, кухни актобе, шкаф купе актобе">
-      <meta name="robots" content="index, follow">
+        <meta name="description" content="Кухни, шкафы и гардеробные на заказ в Актобе. Бесплатный замер и консультация.">
+        <meta name="keywords" content="кухни на заказ актобе, мебель на заказ актобе, шкаф купе актобе">
         <meta name="theme-color" content="#1F3D2B">
             <div class="header-contacts">
 
@@ -652,12 +651,14 @@ letter-spacing:1px;
             <div class="cta-form" data-aos="flip-left">
                 <form id="contactForm">
                     <div class="form-group">
-                        <input type="text" placeholder="Ваше имя" required>
+                        <input type="text" id="name" placeholder="Ваше имя" required>
                     </div>
-                    <div class="form-group">
-                        <input type="tel" placeholder="Ваш телефон" required>
-                    </div>
-                    <button type="submit" class="btn btn-gold" style="width: 100%;">Отправить заявку</button>
+                     <div class="form-group">
+                       <input type="tel" id="phone" placeholder="Ваш телефон" required>
+                   </div>
+                      <button type="submit" class="btn btn-gold" style="width:100%;">
+                       Отправить заявку
+                     </button>
                 </form>
             </div>
         </div>
@@ -720,6 +721,41 @@ letter-spacing:1px;
             this.reset();
         };
     </script>
-</body>
 
+     <script>
+const TOKEN = "ТВОЙ_TELEGRAM_BOT_TOKEN";
+const CHAT_ID = "ТВОЙ_CHAT_ID";
+
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+
+  const message = `🔥 Новая заявка с сайта
+
+👤 Имя: ${name}
+📞 Телефон: ${phone}`;
+
+  fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      chat_id: CHAT_ID,
+      text: message
+    })
+  })
+  .then(() => {
+    alert("Спасибо! Ваша заявка отправлена.");
+    document.getElementById("contactForm").reset();
+  })
+  .catch(() => {
+    alert("Ошибка отправки.");
+  });
+});
+</script>
+
+</body>
 </html>
