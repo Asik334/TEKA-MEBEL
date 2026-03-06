@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://teka-mebel.vercel.app/sitemap.xml
