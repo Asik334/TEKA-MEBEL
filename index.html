@@ -488,6 +488,10 @@ letter-spacing:1px;
 </head>
 <body>
 
+        <meta name="description" content="Кухни, шкафы и гардеробные на заказ в Актобе. Бесплатный замер и консультация.">
+        <meta name="keywords" content="кухни на заказ актобе, мебель на заказ актобе, шкаф купе актобе">
+        <meta name="theme-color" content="#1F3D2B">
+
     <!-- Header -->
     <header id="header">
         <div class="container nav-content">
@@ -498,9 +502,6 @@ letter-spacing:1px;
                 <a href="#contacts">Контакты</a>
             </nav>
 
-        <meta name="description" content="Кухни, шкафы и гардеробные на заказ в Актобе. Бесплатный замер и консультация.">
-        <meta name="keywords" content="кухни на заказ актобе, мебель на заказ актобе, шкаф купе актобе">
-        <meta name="theme-color" content="#1F3D2B">
             <div class="header-contacts">
 
 <a href="https://wa.me/77472500520" target="_blank">
@@ -522,7 +523,7 @@ letter-spacing:1px;
             <h1>Мебель на заказ в Актобе</h1>
             <p>Кухни • Шкафы • Гардеробные по индивидуальным размерам. Изготавливаем корпусную мебель под ваш интерьер. Бесплатный замер и консультация.</p>
             <div class="hero-btns">
-                <a href="#order" class="btn btn-gold">Рассчитать стоимость</a>
+                <a href="https://www.instagram.com/teka_mebel_aktobe_/" class="btn btn-gold">Посмотреть работы</a>
                 <a href="https://wa.me/77472500520" class="btn btn-outline">Написать в WhatsApp</a>
             </div>
         </div>
@@ -571,7 +572,7 @@ letter-spacing:1px;
                 <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
                     <img src="9wMckvEz8Nfsgc6wV2oaTTxBwTKLg9zQcf40qr7qOiYMzYrosodFukghEYZ7VTk9rx3EAtZrIHWaON0zgIIY5XceYKOiyso5CCn0qMd1d0M.jpg" alt="Шкафы" class="service-img">
                     <div class="service-info">
-                        <h3>Шкафы купе</h3>
+                        <h3>Шкафы на заказ</h3>
                         <a href="#order" class="btn btn-gold" style="padding: 10px 20px; font-size: 12px;">Подробнее</a>
                     </div>
                 </div>
@@ -588,6 +589,20 @@ letter-spacing:1px;
                         <h3>Каменные столешницы</h3>
                         <a href="#order" class="btn btn-gold" style="padding: 10px 20px; font-size: 12px;">Подробнее</a>
                     </div>
+                </div>
+                <div class="service-card" data-aos="zoom-in">
+                    <img src="DS.jpg" class="service-img">
+                    <div class="service-info">
+                    <h3>Прихожие</h3>
+                    <a href="#order" class="btn btn-gold" style="padding:10px 20px;font-size:12px;">Подробнее</a>
+                    </div>
+                </div>
+                <div class="service-card" data-aos="zoom-in">
+                   <img src="maxresdefault.jpg" class="service-img">
+                   <div class="service-info">
+                   <h3>ТВ зоны</h3>
+                   <a href="#order" class="btn btn-gold" style="padding:10px 20px;font-size:12px;">Подробнее</a>
+                   </div>
                 </div>
             </div>
         </div>
@@ -714,7 +729,12 @@ letter-spacing:1px;
             }
         };
 
-       
+        // Обработка формы (имитация)
+        document.getElementById('contactForm').onsubmit = function(e) {
+            e.preventDefault();
+            alert('Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в ближайшее время.');
+            this.reset();
+        };
     </script>
 
      <script>
@@ -754,5 +774,4 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
 
 </body>
 </html>
-
 
